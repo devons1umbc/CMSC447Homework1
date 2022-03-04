@@ -6,7 +6,7 @@ Pip dependencies include Flask, Pymongo, Requests, and Dnspython. The program al
 
 The web pages are stored in a folder called templates. The database server is a cloud based MongoDB server.
 
-To run it, open your command prompt in the folder and type either "python3 SoftwareEngiHW1.py" or "python SoftwareEngiHW1.py". The program will take a few seconds to start up as it takes time to connect to MongoDB. Once running, you can connect to it by typing "http://localhost:5000/" into your browser. 
+To run it, open your command prompt in the folder and type either "python3 SoftwareEngiHW1Py.py" or "python SoftwareEngiHW1Py.py". The program will take a few seconds to start up as it takes time to connect to MongoDB. Once running, you can connect to it by typing "http://localhost:5000/" into your browser. 
 
 Places I gained inspiration for this project:
   Tech With Tim on YouTube when learning how to set up and use Flask: https://www.youtube.com/watch?v=mqhxxeeTbu0 (this ties into a series on learning Flask)
