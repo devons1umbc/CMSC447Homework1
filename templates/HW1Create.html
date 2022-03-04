@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Software Engi HW 1
+    </title>
+    <style>
+        .bar
+        {
+            background-color: #da47ff;
+            overflow: hidden;
+        }
+        .bar a
+        {
+            float: center;
+            color: #000000;
+            text-align: center;
+            text-decoration: none;
+            padding: 20px 20px;
+            font-size: 28px;
+            font-family: Impact, fantasy;
+        }
+        .bar a:hover
+        {
+            background-color: #ff4c4c;
+            color: black;
+        }
+    </style>
+</head>
+<body bgcolor="pink">
+    <div class = "bar">
+        <a href="http://{{ip}}">Home</a>
+        <a href="http://{{ip}}/create">Create</a>
+        <a href="http://{{ip}}/delete">Delete</a>
+        <a href="http://{{ip}}/update">Update</a>
+        <a href="http://{{ip}}/list">List</a>
+    </div>
+    <h1>
+        <center>
+            Create an Entity
+        </center>
+    </h1>
+    <table align = "center">
+        <tr>
+            <td>
+                <img src="https://c.tenor.com/eVXHLyK4c-kAAAAC/building-lego.gif" align = "left" width="300" height="250">
+            </td>
+            <td style="width:70%" valign="top">
+                <div align="center">
+                    <h1>
+
+                        <p style="text-decoration: underline;">Last Inserted Entity</p>
+                            Name: {%print(name)%}
+                            </br>
+                            Points: {%print(score)%}
+                            </br>
+                            ID: {%print(id)%}
+
+                    </h1>
+                    <form action = "http://{{ip}}/create" method = "post">
+                        <p>Enter ID: <input type = "text" name = "idcreate" /></p>
+                        <p>Enter Name: <input type = "text" name = "namecreate" /></p>
+                        <p>Enter Score: <input type = "text" name = "scorecreate" /></p>
+                        <p><input type = "submit" value = "submit" /></p>
+                    </form>
+                    {%print(message)%}
+                </div>
+            </td>
+            <td>
+                <img src="https://c.tenor.com/eVXHLyK4c-kAAAAC/building-lego.gif" align="right" width="300" height="250">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Software Engi HW 1
+    </title>
+    <style>
+        .bar
+        {
+            background-color: #da47ff;
+            overflow: hidden;
+        }
+        .bar a
+        {
+            float: center;
+            color: #000000;
+            text-align: center;
+            text-decoration: none;
+            padding: 20px 20px;
+            font-size: 28px;
+            font-family: Impact, fantasy;
+        }
+        .bar a:hover
+        {
+            background-color: #ff4c4c;
+            color: black;
+        }
+    </style>
+</head>
+<body bgcolor="pink">
+    <div class = "bar">
+        <a href="http://{{ip}}">Home</a>
+        <a href="http://{{ip}}/create">Create</a>
+        <a href="http://{{ip}}/delete">Delete</a>
+        <a href="http://{{ip}}/update">Update</a>
+        <a href="http://{{ip}}/list">List</a>
+    </div>
+    <h1>
+        <center>
+            List of all Entities
+        </center>
+    </h1>
+    <table align = "center">
+        <tr>
+            <td>
+                <img src="https://media2.giphy.com/media/B7o99rIuystY4/giphy.gif?cid=790b761192c7366aeeb43deb426242da3cb51fd4c21774cb&rid=giphy.gif&ct=g" align = "left" width="300" height="250">
+            </td>
+            <td style="width:70%" valign="top">
+                <div align="center">
+                    <table border = "1">
+                        <tr>
+                            <th>
+                                ID
+                            </th>
+                            <th>
+                                Name
+                            </th>
+                            <th>
+                                Points
+                            </th>
+                        </tr>
+                        {%for i in collection%}
+                        <tr>
+                            <td>
+                                {%print(i["Id"])%}
+                            </td>
+                            <td>
+                                {%print(i["Name"])%}
+                            </td>
+                            <td>
+                                {%print(i["Points"])%}
+                            </td>
+                        </tr>
+                        {%endfor%}
+                    </table>
+
+                </div>
+            </td>
+            <td>
+                <img src="https://media2.giphy.com/media/B7o99rIuystY4/giphy.gif?cid=790b761192c7366aeeb43deb426242da3cb51fd4c21774cb&rid=giphy.gif&ct=g" align="right" width="300" height="250">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>

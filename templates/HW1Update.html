@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>
+        Software Engi HW 1
+    </title>
+    <style>
+        .bar
+        {
+            background-color: #da47ff;
+            overflow: hidden;
+        }
+        .bar a
+        {
+            float: center;
+            color: #000000;
+            text-align: center;
+            text-decoration: none;
+            padding: 20px 20px;
+            font-size: 28px;
+            font-family: Impact, fantasy;
+        }
+        .bar a:hover
+        {
+            background-color: #ff4c4c;
+            color: black;
+        }
+    </style>
+</head>
+<body bgcolor="pink">
+    <div class = "bar">
+        <a href="http://{{ip}}">Home</a>
+        <a href="http://{{ip}}/create">Create</a>
+        <a href="http://{{ip}}/delete">Delete</a>
+        <a href="http://{{ip}}/update">Update</a>
+        <a href="http://{{ip}}/list">List</a>
+    </div>
+    <h1>
+        <center>
+            Update an Entity
+        </center>
+    </h1>
+    <table align = "center">
+        <tr>
+            <td>
+                <img src="https://media2.giphy.com/media/WpTSS9MfDZ8sDVSZWZ/giphy.gif?cid=790b76118937e4d991a534c197578c2fa60e96011b30e201&rid=giphy.gif&ct=s" align = "left" width="300" height="250">
+            </td>
+            <td style="width:70%" valign="top">
+                <div align="center">
+                    <h1>
+
+                        <p style="text-decoration: underline;">Original Entity</p>
+                            Name: {%print(nameorig)%}
+                            </br>
+                            Points: {%print(scoreorig)%}
+                            </br>
+                            ID: {%print(idorig)%}
+                        <p style="text-decoration: underline;">Updated Entity</p>
+                            Name: {%print(newname)%}
+                            </br>
+                            Points: {%print(newscore)%}
+                            </br>
+                            ID: {%print(newid)%}
+
+                    </h1>
+                    <form action = "http://{{ip}}/update" method = "post">
+                        <p>Enter ID to update: <input type = "text" name = "idget" /></p>
+                        <p>Enter new ID: <input type = "text" name = "idupdate" /></p>
+                        <p>Enter new Name: <input type = "text" name = "nameupdate" /></p>
+                        <p>Enter new Score: <input type = "text" name = "scoreupdate" /></p>
+                        <p><input type = "submit" value = "submit" /></p>
+                    </form>
+                    {%print(message)%}
+                </div>
+            </td>
+            <td>
+                <img src="https://media2.giphy.com/media/WpTSS9MfDZ8sDVSZWZ/giphy.gif?cid=790b76118937e4d991a534c197578c2fa60e96011b30e201&rid=giphy.gif&ct=s" align="right" width="300" height="250">
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
